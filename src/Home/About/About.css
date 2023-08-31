@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Tektur:wght@400;700;800&display=swap");
+#about {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 2rem;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  font-family: "Tektur", cursive;
+  text-align: center;
+  color: #629eff;
+  padding-bottom: 35px;
+  background: -webkit-linear-gradient(-180deg, #209cff 0%, #68e0cf 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(-90deg, #209cff 0%, #68e0cf 100%);
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #0A1732;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(18, 43, 63, 0.8941176471);
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+}/*# sourceMappingURL=About.css.map */

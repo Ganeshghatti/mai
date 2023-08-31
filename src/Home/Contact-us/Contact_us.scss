@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap");
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+.Contact_us {
+  width: 98vw;
+  height: 90vh;
+  @include flex(row);
+  margin-top: 5rem;
+  padding: 20px 0 20px 0;
+  @media (max-width: 950px) {
+    flex-direction: column;
+    height: auto;
+  }
+  .contact-left-div {
+    width: 47vw;
+    @include flex(row);
+    justify-content: flex-end;
+    @media (max-width: 950px) {
+      width: 98vw;
+      justify-content: center;
+    }
+    .Get_In_Touch {
+      width: 70%;
+      object-fit: contain;
+      @media (max-width: 1250px) {
+        object-fit: contain;
+      }
+      @media (max-width: 950px) {
+        width: 75%;
+      }
+    }
+  }
+  .contact-right-div {
+    @include flex(column);
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 950px) {
+      width: 98vw;
+      gap: 10px;
+    }
+    .contact-right-getintouch-text {
+      font-size: 35px;
+      text-transform: uppercase;
+      width: fit-content;
+      text-align: center;
+      font-family: "Tektur", cursive;
+      color: #629eff;
+      padding-bottom: 35px;
+      background: -webkit-linear-gradient(-180deg, #209cff 0%, #68e0cf 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+    .contact-right-description {
+      color: white;
+      text-align: center;
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+      margin:0 0 25px 0;
+      @media (max-width: 950px) {
+        padding: 0 20vw;
+      }
+    }
+    form {
+      @include flex(column);
+      align-items: center;
+      gap: 20px;
+      .contact-right-name-div {
+        @include flex(row);
+        width: 400px;
+        justify-content: space-between;
+        @media (max-width: 950px) {
+          width: 69vw;
+        }
+        @media (max-width: 650px) {
+          width: 70vw;
+        }
+        .contact-right-firstname,
+        .contact-right-lastname {
+          width: 170px;
+          height: 32px;
+          background: #0A1833;
+          @media (max-width: 950px) {
+            width: 30vw;
+          }
+        }
+      }
+      input,
+      textarea {
+        &:focus {
+          border: 2px solid #0282af;
+          background: #0A1833;
+        }
+      }
+      .contact-right-email,
+      .contact-right-phone {
+        width: 400px;
+        height: 32px;
+        background: #0A1833;
+        @media (max-width: 950px) {
+          width: 70vw;
+        }
+      }
+      .contact-right-message {
+        width: 400px;
+        height: 50px;
+        resize: none;
+        background: #0A1833;
+        padding: 10px 0 0 20px;
+        color: white;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        @media (max-width: 950px) {
+          width: 70vw;
+        }
+      }
+      .contact-right-email,
+      .contact-right-phone,
+      .contact-right-firstname,
+      .contact-right-lastname {
+        color: white;
+        background: #0A1833;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        outline: none;
+        padding: 0 0 0 20px;
+        border: none;
+        border-radius: 5px;
+      }
+      .contact-right-getintouch-text,
+      .contact-right-description {
+        margin: 0;
+      }
+      .contact-right-submit {
+        border-radius: 0px 20px 0px 0px;
+        background: -webkit-linear-gradient(-180deg, #209cff 0%, #68e0cf 100%);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.56px;
+        padding: 10px 30px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          font-size: 16px;
+          padding: 10px 32px;
+        }
+      }
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+.contact-right-getintouch-text::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(-90deg, #209cff 0%, #68e0cf 100%);
+}

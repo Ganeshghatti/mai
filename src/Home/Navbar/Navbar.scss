@@ -1,0 +1,64 @@
+nav {
+  width: 95vw;
+  margin: 20px 0 0 2.5vw;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  background-color: #0A162A;
+  border: 1px solid #184671;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  @media (max-width: 950px) {
+    padding: 10px 20px;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+nav .navbar-logo {
+  width: 50px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 35px;
+}
+
+nav ul li a {
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Tektur", cursive;
+  font-weight: 400;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #018cff;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #018cff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
